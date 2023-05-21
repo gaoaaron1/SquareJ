@@ -28,7 +28,14 @@ export const ShopContextProvider = (props) => {
         setCartItems((prev) => ({...prev, [itemId]: prev[itemId] - 1}))
     };
 
-    const contextValue = {cartItems, addToCart, removeFromCart}
+    {/* Method used to change the value of stock in item */}
+    const updateCartItemCount = (newAmount, itemId) => {
+        setCartItems((prev) => ({ ...prev, [itemId]: newAmount }));
+    };
+
+    const contextValue = {
+        cartItems, addToCart, removeFromCart, updateCartItemCount
+    }
 
 
     return (
