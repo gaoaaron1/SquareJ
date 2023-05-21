@@ -7,23 +7,33 @@ export const Product = (props) => {
 
     const cartItemAmount = cartItems[id]
 
-  return (
-    <div className="product">
-      
-        <img src={productImage} />
-        <div className="description">
-            <p> 
+  // Check if the query is empty or if the productName includes the query
+  const shouldDisplayProduct =
+    props.query === '' || productName.toLowerCase().includes(props.query.toLowerCase());
+
+
+    return (
+
+        //Render the product if the conditions are met
+        shouldDisplayProduct && (
+
+            
+          <div className="product">
+            <img src={productImage} alt={productName} />
+            <div className="description">
+              <p>
                 <b>{productName}</b>
-            </p>
-            <p> ${price} </p>
-        </div>
+              </p>
+              <p>${price}</p>
+            </div>
+            <button className="addToCartBttn" onClick={() => addToCart(id)}>
+              Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount})</>}
+            </button>
+          </div>
 
-        <button className="addToCartBttn" onClick={() => addToCart(id)}> 
-            Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount})</>}
-        </button>
+        )
 
-    </div>
-  )
-}
+      );
+    };
 
 
