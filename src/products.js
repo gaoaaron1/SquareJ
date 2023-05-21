@@ -7,25 +7,25 @@ export const PRODUCTS = [
     {
         id: 1,
         productName: "Apples",
-        price: 2.0,
+        price: 4.77,
         productImage: product1,
     },
     {
         id: 2,
-        productName: "Oranges",
-        price: 2.0,
+        productName: "1 kg Oranges",
+        price: 4.12,
         productImage: product2,
     },
     {
         id: 3,
         productName: "Banana",
-        price: 2.0,
+        price: 1.63,
         productImage: product3,
     },    
     {
         id: 4,
         productName: "Kiwi",
-        price: 2.0,
+        price: 1.5,
         productImage: product4,
     },        
 ];
