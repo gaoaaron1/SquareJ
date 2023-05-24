@@ -47,8 +47,13 @@ export default function Login() {
                 <button onClick = {login}>
                     Login
                 </button>
+                <p>
+                    Need an Account?<br />
+                    <span className="line">
+                        <a href="../register/">Sign Up</a>
+                    </span>
+                </p>
             </div>
-
             <h1> {loginStatus} </h1>
         </div>
       )
