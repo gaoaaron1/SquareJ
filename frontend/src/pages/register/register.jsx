@@ -4,9 +4,11 @@ import { useState } from "react"
 
 export default function Register() {
 
+  //Declare use states
   const [usernameReg, setUsernameReg] = useState("");
   const [passwordReg, setPasswordReg] = useState("");
 
+  //Register function
   const register = () => {
     Axios.post("http://127.0.0.1:3001/register", {
         username: usernameReg, 
@@ -17,7 +19,7 @@ export default function Register() {
   };
 
   return (
-    <div>
+    <div className="input-container">
         <div className="registration">
             <label>Username</label>
             <input type="text" onChange={(e) => {

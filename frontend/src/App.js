@@ -21,7 +21,7 @@ function App() {
 
           {/*Navigation routes*/}
           <Routes>
-              <Route path="/" element={<Login />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/shop" element={<Shop />} />
               <Route path="/cart" element={<Cart />} />
