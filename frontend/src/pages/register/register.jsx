@@ -1,6 +1,7 @@
 import React from 'react'
 import Axios from 'axios'
 import { useState } from "react"
+import "./register.css"
 
 export default function Register() {
 
@@ -32,6 +33,12 @@ export default function Register() {
             <button onClick = {register}>
                 Register
             </button>
+                <p>
+                    Already have an Account?<br />
+                    <span className="line">
+                        <a href="../login/">Log In</a>
+                    </span>
+                </p>
         </div>
     </div>
   )
