@@ -4,6 +4,9 @@ import { Product } from "./product";
 import "./shop.css";
 import { useState } from "react";
 
+//Import icons
+import { ShoppingCart } from 'phosphor-react';
+
 export default function Shop() {
 
   {/*Query state is used to type on search bar */}
@@ -23,11 +26,25 @@ export default function Shop() {
       </div>
 
       {/* Search Bar */}
-        <div className="searchBar">
-        <form action="">
-            <input type="text" placeholder="Search..." onChange={e => setQuery(e.target.value)} />
-        </form>
+      <div className = "searchBar">
+
+      <input type="text" placeholder="Search.." name="search" onChange={e => setQuery(e.target.value)} />
+      <button type="submit"><i class="fa fa-search"></i></button>
+      </div>
+
+
+       {/* Drop down menu */} 
+       <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
         </div>
+      </div>       
 
 
       <div className="products"> {PRODUCTS.map((product) => (
