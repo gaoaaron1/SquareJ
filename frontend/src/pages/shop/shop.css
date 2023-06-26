@@ -169,3 +169,19 @@ form.example::after {
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .products {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+

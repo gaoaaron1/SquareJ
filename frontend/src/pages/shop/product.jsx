@@ -29,6 +29,8 @@ export const Product = (props) => {
             <button className="addToCartBttn" onClick={() => addToCart(id)}>
               Add To Cart {cartItemAmount > 0 && <> ({cartItemAmount})</>}
             </button>
+
+            
           </div>
 
         )
