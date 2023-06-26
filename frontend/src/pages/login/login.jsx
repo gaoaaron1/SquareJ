@@ -13,19 +13,22 @@ export default function Login() {
     const [password, setPassword] = useState("");
 
     const [loginStatus, setLoginStatus] = useState("");
+    const [loggedIn, setLoggedIn] = useState(false);
 
-    //Login function
+    //Login function for handling submit
     const login = () => {
         Axios.post("http://127.0.0.1:3001/login", {
             username: username, 
             password: password,
         }).then((response) => {
             //After click login button
-
+        
             if (response.data.message) {
                 setLoginStatus(response.data.message);
             } else {
+                
                 setLoginStatus(response.data[0].username);
+                setLoggedIn(true);
                 navigate("/shop");
             }
 

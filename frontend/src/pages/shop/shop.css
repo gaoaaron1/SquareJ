@@ -53,16 +53,135 @@
     cursor: pointer;
   }
 
-.searchBar {
+
+/* SEARCH BAR FEATURES*/
+
+form.searchBar {
     max-width: 600px;
     margin: 50px auto;
 }
-input[type="text"] {
-    display: block;
-    width: calc(100% - 24px); /*20px [ left & Right ] padding + 4px border [ left & Right ] */ 
-    font-size: 18px;
-    font-weight: 600;
-    color: #4b00ff;
+
+form.searchBar input[type="text"] {
     padding: 10px;
-    border: 2px solid #4b00ff;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
 }
+
+form.searchBar button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.searchBar button:hover {
+    background: #0b7dda;
+}
+
+
+
+form.searchBar::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/*DROP BUTTON*/
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .products {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
